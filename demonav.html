@@ -18,7 +18,7 @@ html {
 body {
     font-family: 'Unica One', cursive;
     margin: 0px;
-    overflow-y: scroll;
+   /*overflow-y: scroll;*/
     max-height: 100%;
     min-height: 100%;
     display: flex;
@@ -33,6 +33,7 @@ body {
 	min-height: 100%;
 	max-height: 100%;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	position: absolute;
 	min-width: 25%;
 	max-width: 25%;
@@ -90,6 +91,7 @@ div.leftnav.enter {
 }
 
 div.flex {
+	border-bottom: 2px solid #555;
 	flex-basis: 100px;
 	flex-grow: 0;
 	flex-shrink: 1;
@@ -120,7 +122,7 @@ div.hamburger {
     height: 6px;
     width: 40px;
     border-radius: 9px;
-    left: 20px;
+    left: 24px;
    	transition: background .5s, left .5s, top .5s, opacity .5s, transform .5s;
 	background: #888;
 	z-index: 5050;
@@ -205,7 +207,7 @@ div.child p, a{
 }
 
 .icon:nth-child(1) i {
-	transition-delay: .16s;
+	transition-delay: .1s;
 }
 
 .animate .icon:nth-child(1) i {
@@ -213,7 +215,7 @@ div.child p, a{
 }
 
 .icon:nth-child(2) i {
-	transition-delay: .16s;
+	transition-delay: .09s;
 }
 
 .animate .icon:nth-child(2) i {
@@ -221,7 +223,7 @@ div.child p, a{
 }
 
 .icon:nth-child(3) i {
-	transition-delay: .12s;
+	transition-delay: .075s;
 	
 }
 .animate .icon:nth-child(3) i {
@@ -229,7 +231,7 @@ div.child p, a{
 }
 
 .icon:nth-child(4) i {
-	transition-delay: .08s;
+	transition-delay: .06s;
 }
 
 .animate .icon:nth-child(4) i {
@@ -237,7 +239,7 @@ div.child p, a{
 }
 
 .icon:nth-child(5) i {
-	transition-delay: .04s;
+	transition-delay: .03s;
 }
 
 .animate .icon:nth-child(5) i {
@@ -295,7 +297,6 @@ div.h2container {
 	flex: 0 0 auto;
 }
 
-
 ul {
 	margin-top: 0px;
 	padding-top: 0px;
@@ -312,7 +313,7 @@ li {
 	background: #333;
 	width: 175%;
 	flex: 0 0 100px;
-	margin-left: -300px;
+	margin-left: -400px;
 	transition: margin-left .5s;
 	text-align: center;
 }
@@ -402,7 +403,7 @@ li i {
 	margin-left: 22.5%;
 	margin-right: 22.5%;
 	text-align: center;
-	height: 135px;
+	height: 140px;
 	padding-top: 16px;
 }
 
@@ -443,9 +444,9 @@ li i {
 }
 
 .footer {
-	flex: 0 1 60px;
-	max-height: 60px !important;
-	padding-top: 20px;
+	flex: 0 1 40px;
+	max-height: 40px !important;
+	padding-top: 8px;
 	color: white; 
 	text-align: center;
 }
@@ -480,7 +481,10 @@ a {
 	color: #dedeff;
 
 }
-
+.child.ranch p span:nth-child(2){
+	float: right;
+	padding-right: 24px;
+}
 @media all and (max-width: 818px) {
 
 	.rowtwo {
@@ -619,7 +623,7 @@ a {
 <div class="contentblock grey">
 <p> paragraphz 5 </p>
 </div>
-<div class="footer"> fuck the bee gee's &#x2022; <a href="https://github.com/williapa">github </a></div>
+<div class="footer"> Built by Williapa &#x2022; <a href="https://github.com/williapa">github </a></div>
 </div>
 
 <script>
