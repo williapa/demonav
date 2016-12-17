@@ -172,15 +172,17 @@ div.child p, a{
 	justify-content: space-between;
 	transition: margin-top .3s;
 	margin-top: -500px;
+	display: flex;
+	flex-direction: column;
 }
 
 .rowtwo.drop {
 	margin-top: 0px;
+	overflow-x: hidden;
 }
 
 .icon {
-	flex: 1 1 100px;
-	min-width: 100px;
+	flex: 1 1 80px;
 	margin-left: 1%;
 	margin-right: 1%;
 	color: white;
@@ -199,7 +201,7 @@ div.child p, a{
 
 .animate .icon i{
 	opacity: 1;
-	top: 100px;
+	top: 130px;
 }
 
 .icon:nth-child(1) i {
@@ -309,8 +311,7 @@ li {
 	border-bottom: 2px solid #666;
 	background: #333;
 	width: 175%;
-	height: 90px;
-	flex: 0 0 110px;
+	flex: 0 0 100px;
 	margin-left: -300px;
 	transition: margin-left .5s;
 	text-align: center;
@@ -378,7 +379,7 @@ li.black {
 }
 
 li i {
-	margin-top: 35px;
+	margin-top: 30px;
 	margin-left: 35%;
 	text-align: center;
 	color: white;
@@ -392,8 +393,8 @@ li i {
 	margin-bottom: 0px;
 	flex: 1 1 1px;
 	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .contentblock p {
@@ -401,13 +402,14 @@ li i {
 	margin-left: 22.5%;
 	margin-right: 22.5%;
 	text-align: center;
-	height: 120px;
-	padding-top: 20px;
+	height: 135px;
+	padding-top: 16px;
 }
 
 .contentblock.white {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	padding-left: 20%;
 	padding-right: 20%;
@@ -441,8 +443,8 @@ li i {
 }
 
 .footer {
-	flex: 0 1 80px;
-	max-height: 80px !important;
+	flex: 0 1 60px;
+	max-height: 60px !important;
 	padding-top: 20px;
 	color: white; 
 	text-align: center;
@@ -484,17 +486,12 @@ a {
 	.rowtwo {
 		margin-top: -20px;
 	}
-	.contentblock p {
-		max-height: 50px !important;
-	}
 
-	.contentblock.white {
-		justify-content: space-between;
-		padding-left: 24px;
-		padding-right: 24px;
+	.contentblock p {
+		max-height: 60px !important;
 	}
 	.icon {
-		max-width: 50px;
+		margin: 0;
 	}
 
 	.hamburger {
@@ -531,15 +528,19 @@ a {
 	.dropdown p span, .child.ranch p span span {
 		display: none;
 	}
-
+}
+@media all and (max-width: 1200px){
+	.contentblock.white {
+		justify-content: space-between;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.rowtwo {
+		padding: 0px 20px 0px 20px;
+	}
 	.contentblock p {
 		margin-left: 24px;
 		margin-right: 24px;
-	}
-}
-@media all and (max-width: 1200px){
-	.rowtwo {
-		padding: 0px 20px 0px 20px;
 	}
 }
 </style>
@@ -618,7 +619,7 @@ a {
 <div class="contentblock grey">
 <p> paragraphz 5 </p>
 </div>
-<div class="footer"> fuck the bee gee's &#x2022; <a href="github.com/williapa">github </a></div>
+<div class="footer"> fuck the bee gee's &#x2022; <a href="https://github.com/williapa">github </a></div>
 </div>
 
 <script>
