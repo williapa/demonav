@@ -6,24 +6,13 @@
 </head>
 <style>
 
-@keyframes -OPEN {
-  to {
-  	height: 160px;
-  }
-}
-  
-@keyframes -CLOSED {
-  to {
-  	height: 80px;
-  }
-}
-
 * {
     box-sizing: border-box;
 }
 
 html {
 	height: 100%;
+	max-width: 100%;
 }
 
 body {
@@ -85,17 +74,19 @@ div.leftnav.enter {
 
 .main {
 	opacity: 1;
-	flex: 1 1 100%;
+	flex: 1 1 75%;
+	width: 100%;
 	max-width: 100%;
 	min-height: 100%;
 	max-height: 100%;
 	display: flex;
 	flex-direction: column;
-	transition: opacity .5s;
+	transition: opacity .5s, width;
 }
 
 .main.obfuscate {
 	opacity: .5;
+	width: 75%;
 }
 
 div.flex {
@@ -140,15 +131,15 @@ div.hamburgerhelper.hamburgercolor .hamburger {
 }
 
 div.hamburger:nth-child(1){
-    top: 25px;
+    top: 30px;
 }
 
 div.hamburger:nth-child(2){
-    top: 35px;
+    top: 40px;
 }
 
 div.hamburger:nth-child(3){
-    top: 45px;
+    top: 50px;
 }
 
 div.dropdown{
@@ -173,14 +164,10 @@ div.child p, a{
 	font-size: 120%;
 }
 
-div.child p span{
-	padding: 20px;
-}
-
 .rowtwo {
-	flex: 0 0 100%
+	flex: 0 0 100%;
 	min-width: 100%;
-	padding: 0px 15% 0px 15%s;
+	padding: 0px 25% 0px 25%;
 	align-self: center;
 	justify-content: space-between;
 	transition: margin-top .3s;
@@ -194,14 +181,18 @@ div.child p span{
 .icon {
 	flex: 1 1 100px;
 	min-width: 100px;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: 1%;
+	margin-right: 1%;
+	color: white;
+	border: 0;
+	transition: color 0.5s ease;
 }
 
 .icon i {
 	opacity: 0;
 	position: absolute;
 	top: -100px;
+	margin-left: 2.5%;
 	transition: opacity .3s, top .3s;
 	min-width: 100px;
 }
@@ -263,7 +254,7 @@ div.child p span{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	margin-left: 30px;
+	overflow-x: hidden;
 }
 
 .popup .hamburger {
@@ -278,11 +269,11 @@ div.child p span{
 }
 .popup .hamburger:nth-child(2){
 	transform: rotate(45deg);
-	top: 35px;
+	top: 40px;
 }
 
 .popup .hamburger:nth-child(3){
-	top: 35px;
+	top: 40px;
 	transform: rotate(-45deg);
 }
 
@@ -290,16 +281,18 @@ h2 {
 	padding-top: 20px;
 	text-align: center;
 	color: white;
-	margin-top: 30px;
+	margin-top: 35px;
 }
 
-.h2container {
+div.h2container {
 	margin-top: -25px;
+	width: 100%;
 	border-bottom: 2px solid #eaeaea;
 	height: 125px;
 	background-color: black;
 	flex: 0 0 auto;
 }
+
 
 ul {
 	margin-top: 0px;
@@ -315,8 +308,8 @@ li {
 	list-style: none;
 	border-bottom: 2px solid #666;
 	background: #333;
-	width: 140%;
-	height: 110px;
+	width: 175%;
+	height: 90px;
 	flex: 0 0 110px;
 	margin-left: -300px;
 	transition: margin-left .5s;
@@ -324,7 +317,7 @@ li {
 }
 
 ul.animation li {
-	margin-left: -40%;
+	margin-left: -75%;
 }
 
 li:nth-child(1){
@@ -340,7 +333,7 @@ li:nth-child(2){
 }
 
 ul.animation li:nth-child(2){
-	transition-delay: .05s;
+	transition-delay: .1s;
 }
 
 li:nth-child(3){
@@ -348,7 +341,7 @@ li:nth-child(3){
 }
 
 ul.animation li:nth-child(3){
-	transition-delay: .1s;
+	transition-delay: .2s;
 }
 
 li:nth-child(4){
@@ -356,7 +349,7 @@ li:nth-child(4){
 }
 
 ul.animation li:nth-child(4){
-	transition-delay: .15s;
+	transition-delay: .3s;
 }
 
 li:nth-child(5){
@@ -364,19 +357,19 @@ li:nth-child(5){
 }
 
 ul.animation li:nth-child(5){
-	transition-delay: .2s;
+	transition-delay: .4s;
 }
 
 li:nth-child(6){
 	transition-delay: 0s;
 }
 
-li:hover {
-	background-color: #444;
+ul.animation li:nth-child(6){
+	transition-delay: .5s;
 }
 
-ul.animation li:nth-child(6){
-	transition-delay: .25s;
+li:hover {
+	background-color: #444;
 }
 
 li.black {
@@ -386,7 +379,7 @@ li.black {
 
 li i {
 	margin-top: 35px;
-	margin-left: 20.2%;
+	margin-left: 35%;
 	text-align: center;
 	color: white;
 }
@@ -408,7 +401,7 @@ li i {
 	margin-left: 22.5%;
 	margin-right: 22.5%;
 	text-align: center;
-	height: 150px;
+	height: 120px;
 	padding-top: 20px;
 }
 
@@ -429,7 +422,7 @@ li i {
 
 .contentblock.white p {
 	flex: 0 1 25%;
-	padding: 10px;
+	padding: 20px 8px 0px 8px;
 	margin: 0 !important;
 	background-color: grey;
 	color: white;
@@ -455,9 +448,98 @@ li i {
 	text-align: center;
 }
 
-@media all and (max-width: 768px) {
+div.child.ranch p span {
+	padding: 0 12px 0 12px;
+	cursor: pointer;
+}
+
+div p:hover span {
+	cursor:pointer;
+}
+
+span:hover {
+	color: #dedeff;
+}
+
+.fixchevy:hover {
+	color: #dedeff;
+}
+
+div.child.ranch p span span {
+	padding: 0;
+}
+
+.icon:hover {
+	color: #dedeff;
+	border: 1px solid #dedeff;
+}
+
+a {
+	color: #dedeff;
+
+}
+
+@media all and (max-width: 818px) {
+
+	.rowtwo {
+		margin-top: -20px;
+	}
 	.contentblock p {
 		max-height: 50px !important;
+	}
+
+	.contentblock.white {
+		justify-content: space-between;
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.icon {
+		max-width: 50px;
+	}
+
+	.hamburger {
+		left: 15%;
+	}
+
+	.popup .hamburger {
+		left: 15%;
+	}
+
+	li i {
+		margin-left: 22.5%;
+	}
+
+	.child.company {
+		flex: 0 1 1px;
+		max-width: 1px;
+		display: none;
+		overflow-x: hidden;
+	}
+
+	h2 {
+		margin-left: -20px;
+	}
+
+	.dropdown p {
+		margin-left: -100px;
+	}
+
+	.child.ranch p {
+		margin-left: -60px;
+	}
+
+	.dropdown p span, .child.ranch p span span {
+		display: none;
+	}
+
+	.contentblock p {
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+}
+@media all and (max-width: 1200px){
+	.rowtwo {
+		padding: 0px 20px 0px 20px;
 	}
 }
 </style>
@@ -487,18 +569,20 @@ li i {
     <div class="hamburger"></div>
     </div class="hamburgerhelper">
     <div class="dropdown"> 
-      <p>
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-        dropdown 
+      <p class="fixchevy">
+      	<i class="fa fa-chevron-down" aria-hidden="true"></i>
+      	<span > 
+          dropdown
+        </span>
       </p>
     </div>
   </div>
   <div class='child company'>
     <!-- svg icon later -->
-    <p> HIDDEN VALLEY </p>
+    <p><span> HIDDEN VALLEY </span> </p>
   </div>
   <div class="child ranch">
-    <p><span> find a ranch </span> <span>login</span></p>
+    <p><span> <span> find a</span> ranch </span> <span>login</span></p>
   </div>
   <div class="rowtwo">
     <div class="icons">
