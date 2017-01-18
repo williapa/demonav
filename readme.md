@@ -35,18 +35,6 @@ COMPLETED:
 	Tested in chrome, animations should very rarely (almost never) drop below 60fps (thank you css transitions)
 
 
-TODOS: 
-
-	hover tooltips
-
-	image carousel page
-
-	page where header color/ logo icon changes on scroll
-
-	page where footer is sticky
-
-	turn into resume page & put on github, put the poker game on heroku and put the advance wars game on azure 
-
 
 
 
